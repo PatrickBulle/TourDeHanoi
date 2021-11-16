@@ -15,8 +15,8 @@ namespace TourDeHanoi
             bool quitterLeJeu = false;
             bool gagne = false;
 
-            AfficherTexte(0, 0, "TOUR DE HANOI");
-            AfficherTexte(0, 1, "=============");
+            AfficherTexte(0, 0, "TOURS DE HANOI");
+            AfficherTexte(0, 1, "==============");
 
             nombreDeDisques = GetNombreDeDisques();
 
@@ -159,7 +159,7 @@ namespace TourDeHanoi
             do
             {
                 EffacerLigne(3);
-                AfficherTexte(0, 3, $"Nombre de disque (entre {NOMBRE_MINI_DISQUES} et {NOMBRE_MAXI_DISQUES} inclus) : ");
+                AfficherTexte(0, 3, $"Nombre de disques (entre {NOMBRE_MINI_DISQUES} et {NOMBRE_MAXI_DISQUES} inclus) : ");
             }
             // On reste dans la boucle tant que la saisie n'est pas entier et si c'est un entier, il doit être compris entre 3 et 10
             while (!(int.TryParse(Console.ReadLine(), out nombreDeDisques) && nombreDeDisques >= NOMBRE_MINI_DISQUES && nombreDeDisques <= NOMBRE_MAXI_DISQUES));
